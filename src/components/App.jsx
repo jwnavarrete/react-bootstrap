@@ -1,10 +1,14 @@
-import React from 'react';
-import '../style/global.scss';
+import React from "react";
+import Layout from "../containers/layout";
+import Login from "../containers/login";
+import "../style/global.css";
 
 const App = () => {
-	return (
-		<h1>Hola Mundo, Bienvenidos al curso practico de React!</h1>
-	);
-}
+  return (
+    <Layout>
+      <Login />
+    </Layout>
+  );
+};
 
 export default App;
