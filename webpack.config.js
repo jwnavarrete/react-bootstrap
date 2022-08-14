@@ -12,13 +12,18 @@ module.exports = {
   resolve: {
     extensions: [".js", ".jsx"],
     alias: {
-			'@components': path.resolve(__dirname, 'src/components/'),
-			'@containers': path.resolve(__dirname, 'src/containers/'),
-			'@hooks': path.resolve(__dirname, 'src/hooks/'),
-			'@styles': path.resolve(__dirname, 'src/styles/'),
-			'@icons': path.resolve(__dirname, 'src/assets/icons/'),
-			'@logos': path.resolve(__dirname, 'src/assets/logos/'),
-		}
+      '@components': path.resolve(__dirname, 'src/components/'),
+      '@containers': path.resolve(__dirname, 'src/containers/'),
+      '@hooks': path.resolve(__dirname, 'src/hooks/'),
+      '@styles': path.resolve(__dirname, 'src/styles/'),
+      '@icons': path.resolve(__dirname, 'src/assets/icons/'),
+      '@logos': path.resolve(__dirname, 'src/assets/logos/'),
+      '@layout': path.resolve(__dirname, 'src/layout/'),
+      '@views': path.resolve(__dirname, 'src/views/'),
+      '@routes': path.resolve(__dirname, 'src/routes/'),
+      '@menu-items': path.resolve(__dirname, 'src/menu-items/'),
+      
+    }
   },
   module: {
     rules: [
@@ -42,9 +47,9 @@ module.exports = {
         use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
-				test: /\.(png|svg|jpg|gif)$/,
-				type: 'asset'
-			}
+        test: /\.(png|svg|jpg|gif)$/,
+        type: 'asset'
+      }
     ],
   },
   plugins: [
